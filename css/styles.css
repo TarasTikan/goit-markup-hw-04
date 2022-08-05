@@ -107,6 +107,36 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  display: flex;
+}
+.mail {
+  align-items: center;
+  justify-content: center;
+}
+
+.tel {
+  align-items: center;
+  justify-content: center;
+}
+
+.mail-icon {
+  margin-right: 10px;
+  fill: currentColor; 
+}
+
+.mail-icon:hover {
+  fill: var(--accent-color);
+}
+
+.phone-icon {
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  fill: currentColor 
+}
+
+.phone-icon:hover {
+  fill: var(--accent-color);
 }
 
 .header-list .tel:focus,
@@ -120,8 +150,11 @@ body {
 }
 /*-------------------------- Hero section --------------------------*/
 .hero {
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/Img.jpg);
+  max-width: 1600px;
   background-color: var(--secondary-bg-color);
   padding: 200px 0;
+  margin: 0 auto;
 }
 
 .hero {
@@ -165,6 +198,24 @@ body {
 .feature {
   padding-top: 94px;
   padding-bottom: 94px;
+}
+.feature-icons { 
+display: flex;
+list-style: none;
+gap: 30px;
+justify-content: center;
+}
+
+.feature-icons-iteam {
+  width: 270px;
+  height: 120px;
+  background-color: var(--accent-color-2);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 .feature-list {
@@ -222,6 +273,37 @@ body {
   text-align: center;
 }
 
+.soc-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+}
+.soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 16px;
+}
+
+.soc-link:hover,
+.soc-link:focus {
+  background-color: var(--accent-color);
+}
+
+.soc-link:hover .soc-icon,
+.soc-link:focus .soc-icon {
+  fill: #fff;
+}
+
+
+.soc-icon {
+  fill: #AFB1B8;
+}
+
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -264,8 +346,62 @@ body {
   letter-spacing: 0.03em;
   margin-top: 10px;
 }
+/*-------------------------- Company section -------------------------- */
+.company {
+  padding-top: 94px;
+  text-align: center;
+  padding-bottom: 94px;
+}
+
+.company-title {
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 36px;
+line-height: 1.16;
+text-align: center;
+letter-spacing: 0.03em;
+color: var(--primary-text-color);
+margin-bottom: 50px;
+}
+
+.company-list{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.company-iteam {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #AFB1B8;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.company-link {
+  fill: #AFB1B8;
+}
+
+.company-iteam:hover,
+.company-iteam:focus {
+  border-color: var(--accent-color);
+}
+
+.company-iteam:hover .company-link,
+.company-iteam:focus .company-link {
+  fill: var(--accent-color);
+}
 
 /*-------------------------- Footer-address section-------------------------- */
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  gap: 70px;
+}
 
 .footer {
   background-color: var(--secondary-bg-color);
@@ -280,7 +416,19 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-bottom: 20px;
+  
+}
+.footer-text {
+  color: var(--primary-bg-color);
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+width: 116px;
+height: 16px;
 }
 
 .footer-address {
@@ -334,6 +482,31 @@ body {
   color: var(--primary-bg-color);
 }
 
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  justify-content: center;
+}
+
+.footer-soc-link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  fill: var(--primary-bg-color);
+  cursor: pointer;
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: var(--accent-color);
+}
+
 /*-------------------------- Portfolio------------------------------ */
 .filtr {
   padding: 94px 0;
@@ -366,7 +539,7 @@ body {
   cursor: pointer;
   font-family: inherit;
   padding: 6px 22px;
-  border-radius: 4px;
+border-radius: 4px;
   border: 0;
 }
 
@@ -379,6 +552,7 @@ body {
 .filtr-btn:focus {
   color: var(--primary-bg-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filtr-wrap {
   padding: 20px 24px;
@@ -390,6 +564,12 @@ body {
 .filtr-cards {
   background-color: var(--primary-bg-color);
 }
+
+.filtr-cards:hover,
+.filtr-cards:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .filtr-link {
   text-decoration: none;
   color: var(--primary-text-color);
